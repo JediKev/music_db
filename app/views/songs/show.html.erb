@@ -12,11 +12,7 @@
 
 <p>
 	<strong>Genre:</strong>
-	<ul>
-		<% @artist.genre.order('name').each do |genre| %>
-		<li><%= genre.name %></li>
-		<% end %>
-	</ul>
+	<li><%= @song.artist.genre.name %></li>
 </p>
 
 <%= link_to 'Edit', edit_song_path(@song) %> |

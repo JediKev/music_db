@@ -36,9 +36,13 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.3, >= 0.3.4)
       tzinfo (~> 1.1)
+    annotate (2.6.5)
+      activerecord (>= 2.3.0)
+      rake (>= 0.8.7)
     arel (6.0.3)
     autoprefixer-rails (6.3.6)
       execjs
+    awesome_print (1.6.1)
     better_errors (2.1.1)
       coderay (>= 1.0.0)
       erubis (>= 2.6.6)
@@ -163,6 +167,8 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  annotate
+  awesome_print
   better_errors
   binding_of_caller
   bootstrap-sass (~> 3.3.6)
