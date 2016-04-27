@@ -10,5 +10,14 @@
   <%= @song.artist.name %>
 </p>
 
+<p>
+	<strong>Genre:</strong>
+	<ul>
+		<% @artist.genre.order('name').each do |genre| %>
+		<li><%= genre.name %></li>
+		<% end %>
+	</ul>
+</p>
+
 <%= link_to 'Edit', edit_song_path(@song) %> |
 <%= link_to 'Back', songs_path %>
