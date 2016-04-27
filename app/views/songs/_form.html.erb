@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: "form-control", placeholder: "Songs" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :artist_id %><br>
-    <%= f.text_field :artist_id %>
+    <%= f.collection_select :artist_id, Artist.all, :id, :name, class: "form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: "btn btn-info btn-lg" %>
   </div>
 <% end %>
