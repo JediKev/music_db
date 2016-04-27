@@ -16,8 +16,32 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
 
 .col-centered {
 	float: none;
 	margin: 0 auto;
+}
+
+.table {
+	padding-top: 20%;
+}
+
+a {
+	color: #888888;
+}
+
+a:hover {
+	color: #aeaeae;
+	background-color: transparent;
+}
+
+a:visited {
+	color: #888888;
+}
+
+a:visited:hover {
+	color: #aeaeae;
+	background-color: transparent;
 }
