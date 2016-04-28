@@ -5,11 +5,10 @@ namespace :db do
 		require 'faker'
 
 		# Clears db of old data
-		[Genre, Artist, Song].each(&:destroy_all)
+		[Artist, Song].each(&:destroy_all)
 
 		# Adds excellent data to db
-		Genre.populate 5 do |genre|
-			genre.name = Faker::Hacker.noun
+		Genre.all.each do |genre|
 			Artist.populate 4..10 do |artist|
 				artist.name = [ Faker::Company.name, Faker::Commerce.product_name ]
 				artist.genre_id = genre.id
@@ -20,6 +19,5 @@ namespace :db do
 			end
 		end	
 		puts "Well done! You have populated the DB!"
-
 	end
 end
