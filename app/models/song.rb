@@ -2,6 +2,7 @@ class Song < ActiveRecord::Base
   belongs_to :artist
 
   validates :name, presence: true, length: { minimum: 1 }
+  validates_uniqueness_of :name, :scope => :artist_id
   validates :artist_id, presence: true
 end
 

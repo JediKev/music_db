@@ -5,6 +5,8 @@ class Artist < ActiveRecord::Base
   validates :name, presence: true, length: { minimum: 1 }
   validates :genre_id, presence: true
   #  This is to say the associated genre actually exists
+  scope :recent, -> (minutes_past=60) {where("created_at > ?", minutes_past.minutes.ago)}
+  scope :today, -> { where('DATE(created_at) = ?', Date.today) }
 end
 
 # == Schema Information
